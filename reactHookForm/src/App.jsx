@@ -6,7 +6,7 @@ export default function App() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="text" {...register("firstName", { required: true, maxLength: 20 })} />
+      <label> FirstName: <input type="text" {...register("firstName", { required: true, maxLength: 20 })} /></label>
       <input type="text" {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
       <input type="number" {...register("age", { min: 18, max: 99 })} />
       <input type="email" {...register("email", { min: 18, max: 29 })} />
